@@ -6,10 +6,6 @@
     <!-- ✅ 필수 인터넷 권한 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- ✅ Android 13 이상: 이미지/비디오 각각 권한 -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-
     <!-- ❌ deprecated: Android 13 이상에서 무시됨 -->
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
     <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->

@@ -1,6 +1,7 @@
 [versions]
 agp = "8.7.2"
-kotlin = "1.9.0"
+kotlin = "2.1.0"
+ksp = "2.1.0-1.0.29"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -13,6 +14,7 @@ pagingCommonAndroid = "3.3.2"
 pagingRuntimeKtx = "3.3.2"
 mediationTestSuite = "3.0.0"
 media3Common = "1.4.1"
+gma = "24.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,8 +29,9 @@ androidx-paging-common-android = { group = "androidx.paging", name = "paging-com
 androidx-paging-runtime-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
 mediation-test-suite = { group = "com.google.android.ads", name = "mediation-test-suite", version.ref = "mediationTestSuite" }
 androidx-media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Common" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "gma" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

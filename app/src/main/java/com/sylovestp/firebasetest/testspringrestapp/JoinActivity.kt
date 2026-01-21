@@ -148,7 +148,19 @@ class JoinActivity : AppCompatActivity() {
     }
 
     private fun openGallery() {
-        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val intent = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+
+            Intent(MediaStore.ACTION_PICK_IMAGES).apply {
+
+            }
+        } else {
+
+            Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "image/*"
+
+            }
+        }
         selectImageLauncher.launch(intent)
     }
 
